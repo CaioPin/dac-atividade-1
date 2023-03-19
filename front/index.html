@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>Sistema de gerenciamento</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Livro</h1>
+        <div id="Livros">
+            <input type="text" id="txtBusca" placeholder="Buscar livro..."/>
+        </div>
+
+        <div id="orgLivros">
+            <p>Pinoquio <input type="button" value="editar"/>
+                <input type="button" value="remover"/>
+            <p>Cinderela <input type="button" value="editar"/>
+                <input type="button" value="remover"/> </p>
+        </div>
+        <div id="bntAddLiv">
+            <input type="button" value="Adicionar livro"/>
+        </div>
+    </div>
+    
+    <div class="containerEd">
+        <div id=Editora>
+            <h1>Editora</h1>
+            <div id="Editoras">
+                <input type="text" id="txtBusca" placeholder="Buscar editora..."/>
+            </div>
+            <div id="orgEditoras">
+                <p>MODERNA <input type="button" value="editar"/>
+                    <input type="button" value="remover"/> </p>
+                <p>Disney <input type="button" value="editar"/> 
+                    <input type="button" value="remover"/> </p>
+            </div>
+            <div id="bntAddEdit">
+                <input type="button" value="Adicionar editora"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-livro">
+        <p id="id-livro"></p>
+
+        <div class="fundo-modal"></div>
+        <div class="conteudo-modal">
+            <div id="titulo-livro">
+                <label for="title">Título</label>
+                <input type="text">
+            </div>
+    
+            <div id="lancamento-livro">
+                <label for="releaseDate">Data de lançamento</label>
+                <input type="text">
+            </div>
+            
+            <button id="salvar-livro">Salvar</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-editora">
+        <p id="id-editora"></p>
+
+        <div class="fundo-modal"></div>
+        <div class="conteudo-modal">
+            <div id="nome-editora">
+                <label for="name">Nome</label>
+                <input type="text">
+            </div>
+    
+            <div id="origem-editora">
+                <label for="origin">Origem</label>
+                <input type="text">
+            </div>
+    
+            <button class="salvar-editora">Salvar</button>
+        </div>
+    </div>
+</body>
+</html>
