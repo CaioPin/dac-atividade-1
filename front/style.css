@@ -1,3 +1,10 @@
+hmtl, body {
+    background-image: url(front/wallpaper.jpg);
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
 .container{
     background-color: lightcyan;
     text-align: center;
@@ -12,7 +19,7 @@
     text-align: center;
 }
 
-#txtBusca{
+#buscar-livros, #buscar-editoras {
     border: solid 2px;
     border-radius: 20px;
     padding-left: 10px;
@@ -59,8 +66,53 @@
 
 }
 
+.livro, .editora {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.editar, .deletar {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 .modal {
     display: none;
+}
+
+.fundo-modal {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.conteudo-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    position: fixed;
+    background-color: white;
+    border-radius: 30px;
+    top: 50%;
+    left: 50%;
+    padding: 60px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.conteudo-modal input {
+    width: 200px;
+    padding: 6px;
 }
 
 #id-livro, #id-editora {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,18 +8,14 @@
     <title>Sistema de gerenciamento</title>
 </head>
 <body>
+    <div style="background-image: url('wallpaper.jpg');">
     <div class="container">
         <h1>Livro</h1>
         <div id="Livros">
-            <input type="text" id="txtBusca" placeholder="Buscar livro..."/>
+            <input type="text" id="buscar-livros" placeholder="Buscar livro..."/>
         </div>
 
-        <div id="orgLivros">
-            <p>Pinoquio <input type="button" value="editar"/>
-                <input type="button" value="remover"/>
-            <p>Cinderela <input type="button" value="editar"/>
-                <input type="button" value="remover"/> </p>
-        </div>
+        <div id="orgLivros"></div>
         <div id="bntAddLiv">
             <input type="button" value="Adicionar livro"/>
         </div>
@@ -29,14 +25,9 @@
         <div id=Editora>
             <h1>Editora</h1>
             <div id="Editoras">
-                <input type="text" id="txtBusca" placeholder="Buscar editora..."/>
+                <input type="text" id="buscar-editoras" placeholder="Buscar editora..."/>
             </div>
-            <div id="orgEditoras">
-                <p>MODERNA <input type="button" value="editar"/>
-                    <input type="button" value="remover"/> </p>
-                <p>Disney <input type="button" value="editar"/> 
-                    <input type="button" value="remover"/> </p>
-            </div>
+            <div id="orgEditoras"></div>
             <div id="bntAddEdit">
                 <input type="button" value="Adicionar editora"/>
             </div>
@@ -77,8 +68,10 @@
                 <input type="text">
             </div>
     
-            <button class="salvar-editora">Salvar</button>
+            <button id="salvar-editora">Salvar</button>
         </div>
     </div>
+    
+    <script src="./index.js" type="module"></script>
 </body>
 </html>
