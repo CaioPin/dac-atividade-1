@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres
+    volumes:
+      - ./data/script.sql:/docker-entrypoint-initdb.d/data/script.sql
+    environment:
+      POSTGRES_PASSWORD: "postgre"
+    ports:
+      - "5432:5432"
+
+  api:
+    container_name: "dac"
+    build:
+      context: .
+      dockerfile: "Dockerfile"
+    volumes:
+      -   volume_um:/home/dados
+    ports:
+      - "8080:8080"
+
+volumes:
+  volume_um:
